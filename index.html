@@ -1,0 +1,155 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rubik Cube Game Online | Rubik Cube — Shivam Pandey</title>
+
+  <meta name="description" content="A 3D Rubik's Cube game built with HTML using Three.js and TypeScript.">
+  <meta name="keywords" content="Rubik's cube, rubik, Three.js, three, WebGL, 3D, cube, game, online, minicode, online">
+  
+  <meta property="og:title" content="RubikCube — Rubik's Cube">
+  <meta property="og:description" content="A 3D Rubik's Cube game built with HTML using Three.js and TypeScript.">
+  <meta property="og:keywords" content="Rubik's cube, rubik, Three.js, three, WebGL, 3D, cube, game, online, minicode, online">
+
+  <meta name="author" content="Shivam Pandey">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <style>
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            position: fixed;
+            right: 5px;
+            bottom: 10px;
+            font-size: 18px;
+            font-weight: normal;
+            writing-mode: vertical-rl;
+        }
+
+        #container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #status {
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* color: white; */
+        }
+
+        .status-item {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #order-select {
+            outline: none;
+        }
+
+        #disorder {
+            width: 50px;
+            display: none;
+        }
+
+        #restore {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <div id="status">
+    <h1>Rubik's Cube</h1>
+
+    <div class="status-item">
+      <label for="finish">Status: </label>
+      <span id="finish"></span>
+    </div>
+
+    <div class="status-item">
+      <label for="order-select">Order: </label>
+      <select id="order-select">
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+
+    <div class="status-item">
+      <button id="restore">Restore</button>
+    </div>
+
+    <!-- coming soon -->
+    <div class="status-item">
+      <button id="disorder">Scramble</button>
+    </div>
+
+    <div>
+      <a href="https://github.com/shivamcsc0909/advamced-rubik-game-    " target="_blank" rel="noopener">View source on GitHub</a>
+    </div>
+
+<footer class="credit"
+  aria-label="page footer"
+  style="display:flex;align-items:center;justify-content:center;gap:10px;
+         padding:12px 20px;
+         background:linear-gradient(90deg,#0f172a 0%,#0b61a4 100%);
+         color:#ffffff;
+         font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+         font-weight:600;
+         border-radius:12px;
+         box-shadow:0 8px 24px rgba(2,6,23,0.6);
+         max-width:380px;
+         margin:20px auto;
+         border:1px solid rgba(255,255,255,0.06);
+         transition:transform .18s ease, box-shadow .18s ease;
+        ">
+
+  <p style="margin:0;display:flex;align-items:center;gap:8px;font-size:14px;">
+    <span aria-hidden="true">✨</span>
+    Created by Shivam Pandey
+  </p>
+
+  <!-- hover/touch lift effect (inline JS) -->
+  <script>
+    (function(){
+      const f = document.currentScript.previousElementSibling;
+      if(!f) return;
+      f.addEventListener('mouseover', ()=> {
+        f.style.transform = 'translateY(-6px)';
+        f.style.boxShadow = '0 14px 36px rgba(2,6,23,0.7)';
+      });
+      f.addEventListener('mouseout', ()=> {
+        f.style.transform = '';
+        f.style.boxShadow = '0 8px 24px rgba(2,6,23,0.6)';
+      });
+      // improve touch UX: tiny scale on touchstart
+      f.addEventListener('touchstart', ()=> f.style.transform = 'scale(0.995)');
+      f.addEventListener('touchend', ()=> f.style.transform = '');
+    })();
+  </script>
+
+</footer>  </div>
+</body>
+    <script type="module" src="./out-tsc/src/index.js"></script>
+</body>
+
+</html>
